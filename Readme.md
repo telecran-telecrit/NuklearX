@@ -7,8 +7,15 @@ NuklearX is out-of-box configured by preprocessor variable NKCD=NKC_x (NKC_XLIB,
 E.g.: gcc -DNKCD=NKC_GLFW main.c
 
 
-## Why?
-[Nuklear](https://github.com/vurtun/nuklear) itself requires a lot of additional code to create OS window etc. Nuklear+ hide it all from programmer. Just write your code, do not think about OS!
+## Why and features?
+
+- [Nuklear](https://github.com/vurtun/nuklear) itself requires a lot of additional user code to create OS window etc. NuklearX hides low details.
+- Immediate mode graphical user interface toolkit
+- Single header library
+- Focus on portability, efficiency and simplicity for user
+- UTF-8 support
+- Written in C89 (ANSI C)
+- Emscripten ready (when using `nkc_set_main_loop`)
 
 
 ## Docs
