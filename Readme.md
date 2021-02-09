@@ -3,8 +3,7 @@ NuklearX (read as "Nuklear-X") is an overlay over Nuklear [Nuklear](https://gith
 
 Write one simple code, compile it for any supported frontend.
 
-NuklearX is out-of-box configured by preprocessor variable NKCD=NKC_x (NKC_XLIB, NKC_SDL, NKC_GLFW, NKC_GDIP).
-E.g.: gcc -DNKCD=NKC_GLFW main.c
+NuklearX is out-of-box configured by preprocessor variable NKCD=NKC_x (NKC_XLIB, NKC_SDL, NKC_GLFW, NKC_GDIP).i
 
 
 ## Why and features?
@@ -25,6 +24,7 @@ You can use [Doxygen docs](https://nuklear-cross.dexp.in). Or just have a look a
 It's the same example as in [original Nuklear](https://github.com/vurtun/nuklear#example). The only difference - you need to add code in original example. This one is working out of the box.
 
 ```c
+#define NKC_IMPLEMENTATION
 #include "nuklear_cross.h"
 #include <stdio.h>
 
@@ -102,6 +102,15 @@ int main(){
 ```
 
 ![example](https://cloud.githubusercontent.com/assets/8057201/10187981/584ecd68-675c-11e5-897c-822ef534a876.png)
+
+
+## Examples of building
+
+```bash
+gcc -lm -lX11 -DNKCD=NKC_XLIB  main.c #pkg-config --cflags --libs x11
+
+gcc -I/usr/include/libdrm -I/usr/include/SDL2  -lm -lGL -lSDL2   -DNKCD=NKC_SDL  main.c #pkg-config --cflags --libs sdl2
+```
 
 
 ## More examples
