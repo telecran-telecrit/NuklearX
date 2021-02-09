@@ -1,7 +1,10 @@
-# Nuklear+
-Nuklear+ (read as "Nuklear cross") is a front-end overlay for [Nuklear](https://github.com/vurtun/nuklear) GUI library.
+# NuklearX
+NuklearX (read as "Nuklear-X") is an overlay over Nuklear [Nuklear](https://github.com/vurtun/nuklear) GUI library.
 
 Write one simple code, compile it for any supported frontend.
+
+NuklearX is out-of-box configured by preprocessor variable NKCD=NKC_x (NKC_XLIB, NKC_SDL, NKC_GLFW, NKC_GDIP).
+E.g.: gcc -DNKCD=NKC_GLFW main.c
 
 
 ## Why?
@@ -118,7 +121,7 @@ git pull
 ```
 
 
-## Applications and games, made on Nuklear+
+## Applications and games, made on NuklearX
 
 - Wordlase: [Steam](http://store.steampowered.com/app/602930/Wordlase/), [Web demo](https://wordlase.dexp.in/), [site](https://dexp.in/games/wordlase/)
 
@@ -131,8 +134,47 @@ git pull
 ## Updating Nuklear files
 The library aims to use vanilla Nuklear.h and driver files from [demo](https://github.com/vurtun/nuklear/tree/master/demo) folder. So in general case you can just replace file by file from [Nuklear](https://github.com/vurtun/nuklear) repo. By the way, the API in demos can be changed. In that case frontend will stop work. Also, there can some functionality, not yet added to Nuklear's main repo. Also, drivers can need some small fixes. The path of `stb_image.h` in `nuklear_xlib.h` for example.
 
-## Credits:
-Developed by Dmitry Hrabrov a.k.a. DeXPeriX and every direct or indirect contributor to the GitHub.
-
 ## License:
-This software is dual-licensed to the public domain and under the following license: you are granted a perpetual, irrevocable license to copy, modify, publish and distribute this file as you see fit
+The authors want give you freedom wihtout warranty: you are granted a perpetual, irrevocable license to copy, modify, publish and distribute this file as you see fit.
+Alternatively you can use original license model of [Nuklear](https://github.com/vurtun/nuklear):
+```
+------------------------------------------------------------------------------
+This software is available under 2 licenses -- choose whichever you prefer.
+------------------------------------------------------------------------------
+ALTERNATIVE A - MIT License
+Copyright (c) 2017 Micha Mettke
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+------------------------------------------------------------------------------
+ALTERNATIVE B - Public Domain (www.unlicense.org)
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
+software, either in source code form or as a compiled binary, for any purpose,
+commercial or non-commercial, and by any means.
+In jurisdictions that recognize copyright laws, the author or authors of this
+software dedicate any and all copyright interest in the software to the public
+domain. We make this dedication for the benefit of the public at large and to
+the detriment of our heirs and successors. We intend this dedication to be an
+overt act of relinquishment in perpetuity of all present and future rights to
+this software under copyright law.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-----------------------------------------------------------------------------
+```
