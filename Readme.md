@@ -110,6 +110,8 @@ int main(){
 gcc -lm -lX11 -DNKCD=NKC_XLIB  main.c #pkg-config --cflags --libs x11
 
 gcc -I/usr/include/libdrm -I/usr/include/SDL2  -lm -lGL -lSDL2   -DNKCD=NKC_SDL  main.c #pkg-config --cflags --libs sdl2
+
+gcc  -lm -lGL -lglfw   -DNKCD=NKC_GLFW  main.c #pkg-config --cflags --libs glfw3
 ```
 
 
